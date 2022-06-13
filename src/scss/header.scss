@@ -52,3 +52,52 @@
 	}
 }
 */
+.header {
+	background: #6B6B6B;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: rem(25) 0px;
+	@media (max-width:$tablet)
+	{
+		margin: 0 rem(15);	  
+	}
+
+	}
+
+	&__logo {
+	}
+
+	&__navigation {
+		
+	}
+}
+.logo-header {
+
+	&__link {
+	}
+}
+.navigation-header {
+
+	&__menu {
+		display: flex;
+	}
+}
+.menu {
+	
+	&__list {
+		display: flex;
+		gap: rem(30);
+		font-size:rem(13);
+		line-height: rem(20);
+		color:#fff;
+	}
+
+	&__list-item {
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}

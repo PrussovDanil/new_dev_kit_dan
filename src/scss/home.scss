@@ -1,3 +1,294 @@
 //====================================================================================================
 
 //====================================================================================================
+
+.home {
+  background: #EBEBEB;
+
+  &__content {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit ,minmax(300px, 1fr));
+    align-items: center;
+    gap: rem(30);
+    padding: rem(70) 0;
+  }
+
+
+  &__title {
+    @include adaptiveValue("font-size", 39px,30px );
+    font-size: 39px;
+    line-height: 45px;
+    margin-bottom: rem(11);
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  &__button {
+    display: inline-block;
+    margin-top: rem(15);
+    padding: rem(15) rem(25);
+    background: #FFFFFF;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    transition: all 0.5s ease;
+    &:hover{
+      box-shadow: 32px 24px 86px 20px rgba(34, 60, 80, 0.2);
+    }
+  }
+
+  &__exaple {
+    width: rem(300);
+
+  }
+}
+.exaple {
+ 
+  margin: 0 auto;
+  margin-bottom: rem(50);
+  &__pfoto{
+    margin-bottom: rem(20);
+    margin-top: rem(20);
+    filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.2));
+    transition: all 0.5 ease;
+    &:hover{
+      filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.5))
+    }
+  }
+  &__pfoto-img{
+    width: 100%;
+    border-radius: 3px;
+  }
+  &__text {
+    text-align: center;
+    font-size: rem(13);
+    color: #777777;
+  }
+}
+
+
+
+.sponsor {
+  
+  background: #D3D3D3;
+  &__container {
+  }
+
+  &__list-item {
+    
+  }
+
+  &__list {
+    padding: rem(30);
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items:center;
+    
+    @media (min-width: 815px){
+    display: grid;
+    gap: rem(30);
+    grid-template-columns:  repeat(auto-fit ,1 fr);
+    grid-auto-flow:column;
+        
+    }
+    
+  }
+}
+
+
+.settings {
+
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    align-items: center;
+    padding: rem(30) 0;
+    gap: rem(30);
+    
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  &__subtitle {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  &__exaple{
+    @media (max-width: em(658)){
+        display: flex;
+        flex-direction: column-reverse;
+    }
+  }
+
+  
+}
+
+.blue-text {
+  
+  background: #3B79C3;
+  border-radius: rem(3);
+  color: #FFFFFF;
+  padding: rem(3);
+  margin: rem(3);
+}
+
+.title-left{
+  @include adaptiveValue("padding-top",100px ,50px );
+  
+}
+.exaple__left{
+  margin-top: rem(50);
+}
+
+
+.section {
+
+  &__tips {
+  }
+}
+.tips {
+  background: #EBEBEB;
+  padding: rem(90) 0;
+  &__container {
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__top {
+    text-align: center;
+  }
+
+  &__top-title {
+    font-size: 31px;
+    line-height: 36px;
+    margin-bottom: rem(30);
+  }
+v
+  &__top-subtitle {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit ,minmax(240px, 1fr));
+    gap: rem(30);
+    width: 100%;
+  }
+
+  &__cards {
+    padding: rem(30) rem(30) rem(35) rem(30);
+    
+    
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    
+  }
+
+  &__cards-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__cards-img {
+    margin: rem(40) 0 rem(31) 0;
+  }
+
+  &__cards-rext {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+.home {
+
+  &__exaple {
+  }
+}
+.exaple {
+
+  &__pfoto {
+  }
+
+  &__pfoto-img {
+  }
+
+  &__text {
+  }
+}
+
+.section {
+
+  &__tips {
+  }
+}
+.addtional {
+
+  &__container {
+    
+  }
+
+  &__content {
+    padding: rem(30) 0;
+    
+  }
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(250px, 1fr));
+    gap: rem(30);
+
+   
+  }
+
+  &__title {
+    margin-bottom: rem(30);
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  &__block {
+    
+  
+   
+  }
+
+  &__block-img {
+  margin-bottom: rem(15);
+ 
+
+   
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;	
+  }
+
+  &__block-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__block-subtitle {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+
+

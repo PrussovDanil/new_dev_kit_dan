@@ -1,0 +1,56 @@
+
+.about {
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+    gap: rem(50);
+    padding: rem(50) 0;
+    justify-content: space-evenly;
+  }
+
+  &__content {
+    
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 80px;
+  }
+
+  &__rext {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+     color: #8F95A5;
+  }
+
+  &__numetric {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  &__numetric-item {
+  }
+
+  &__number {
+    font-size: 48px;
+    line-height: 80px;
+  }
+
+  &__name {
+    font-size: 20px;
+    line-height: 30px;
+
+
+
+color: #8F95A5;
+  }
+
+  &__content-img {
+   display: inline-block;
+  }
+}

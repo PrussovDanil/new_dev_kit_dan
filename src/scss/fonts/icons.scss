@@ -14,3 +14,12 @@
 		display: block;
 	}
 }
+
+._icon-logo:before {
+  content: "\e901";
+	font-size: 30px;
+	//background: linear-gradient(to right, #000000 50%, #CFCFCF 50%);
+}
+._icon-lamp:before {
+  content: "\e900";
+}

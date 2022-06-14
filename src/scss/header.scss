@@ -3,7 +3,7 @@
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -51,4 +51,69 @@
 		}
 	}
 }
-*/
+
+.header {
+
+	&__container {
+	}
+
+	&__logo {
+	}
+
+	&__menu {
+		display: flex;
+		gap: rem(30);
+		color:$mainColorBlue;
+	}
+
+	&__menu-item {
+		
+		
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+	&__menu-link {
+	}
+
+	&__button {
+	}
+}
+.container__header {
+	// display: grid;
+	// grid-template-columns: 20% 60% 20%;
+	// justify-content: space-between;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	gap: rem(15);
+	padding: rem(30) 0;
+	
+	
+	}
+
+.icon-logo {
+	
+
+	}
+
+.btn {
+	transition: all 0.3s ease;
+	border-radius: 5px;
+	&:hover{
+		box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+	}
+}
+.btn-white {
+	border: 2px solid #263238;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 36px;
+	padding: rem(17) rem(57);
+}
+.btn-dark {
+  color: #FFFFFF;
+  background: #263238;
+ 
+}

@@ -1,3 +1,66 @@
 //====================================================================================================
 
 //====================================================================================================
+.footer {
+
+  &__container {
+    
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(30);
+    padding: rem(30) 0;
+    border-top: 2px solid #C4C4C4;
+    @media (max-width: em(350)){
+        flex-direction: column;
+    }
+  }
+
+  &__crums {
+    @media (max-width: em(450)){
+        text-align: center;
+    }
+  }
+
+  &__crums-link {
+   
+    font-weight: 400;
+    font-size: rem(24);
+    @include adaptiveValue("font-size", 24, 16);
+    line-height: rem(36);
+    color: #8F95A5;
+    position: relative;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &__circle{
+    &::before{
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      top: 41%;
+      left: -10%;
+      border-radius: 7.5px;
+      background-color:#8F95A5;
+     @media (max-width: em(768)){
+      top: 37%;
+      left: -12%;
+  
+     }
+    }
+  }
+}
+
+.contact__subscribe{
+  
+  @media (max-width: em(350)){
+    display: flex;
+    flex-direction: column;
+  }
+}

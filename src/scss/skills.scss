@@ -1,12 +1,11 @@
-
 .skills {
 
   &__container {
-    padding: rem(30) 0;
+    @include adaptiveValue("margin-top", 50, 30);
   }
 
   &__title {
-    @include adaptiveValue("font-size",48 , 36);
+    @include adaptiveValue("font-size", 48, 36);
     font-weight: 600;
     line-height: rem(80);
     text-align: center;
@@ -15,67 +14,75 @@
 
   &__block {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    @media (max-width: em(970)){
+
+    @media (max-width: em(970)) {
       display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-        
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
     }
   }
 
-  &__text{
-    margin: rem(15) 0 ;
+  &__text {
+    margin: rem(15) 0;
   }
 
   &__card {
-    display: grid;
-    grid-template-rows: auto ;
+
     background: #F5F5F5;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template: auto 1fr minmax(100px, auto)/1fr;
+
+
     border-radius: 10px;
-   
-    
+
+
   }
 
   &__card-title {
-    @include adaptiveValue("font-size", 22px , 13px);
+    @include adaptiveValue("font-size", 22px, 13px);
     font-weight: 600;
     font-size: 22px;
     line-height: rem(80);
-    color:$mainColorBlue;
+    color: $mainColorBlue;
   }
 
   &__card-text {
-    // grid-column: 1;
-    // grid-row: 1;
+    display: grid;
+    grid-template: auto 1fr minmax(40px, auto)/1fr;
     font-weight: 400;
-    @include adaptiveValue("font-size",16 , 13);
+    @include adaptiveValue("font-size", 16, 13);
     line-height: 21px;
 
     color: #8F95A5
-    
   }
 
   &__card-btn {
     display: inline-block;
     padding: rem(16) rem(40);
     border-radius: 5px;
+    justify-self: start;
   }
-  &__card-text{
+
+  &__card-text {
     padding: 30px;
 
 
   }
 }
-.card__img{
-  
-}
+
+.card__img {}
+
 .card-long {
-  // grid-column: span 2;
   grid-row: span 2;
-  
- 
-  .skills__card-btn{
+
+  @media (max-width: em(575)) {
+    grid-row: span 1;
+  }
+
+  .skills__card-btn {
     display: inline-block;
     margin-top: 70px;
   }
@@ -84,22 +91,46 @@
 
 .card-big {
   grid-column: span 2;
-  // display: flex;
-  // flex-direction: row-reverse;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   align-items: center;
-  .card__img{
-    order: 1;
+
+  @media (max-width: em(767)) {
+    .skills__card-text {
+      display: block;
     }
-  .skills__text{
-    order: -1;
-    }
+
+  }
+
+  @media (max-width: em(575)) {
+    grid-template-columns: none;
+    grid-template: auto 1fr minmax(100px, auto)/1fr;
+    grid-column: span 1;
+
+
+
+  }
+
 }
-.card-machine{
+
+.card-machine {
   margin-left: 0px;
-  @media (min-width: rem(863)){
+  @media (min-width: rem(863)) {
     max-width: 279px;
     margin-left: 120px;
+  }
+}
+
+.reverse-img {
+  order: 1;
+  @media (max-width: em(575)) {
+    order: -1;
+  }
+}
+
+.reverse-text {
+  order: -1;
+  @media (max-width: em(575)) {
+    order: 1;
   }
 }

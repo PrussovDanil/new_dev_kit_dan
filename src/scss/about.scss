@@ -3,46 +3,68 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
-    gap: rem(50);
-    padding: rem(50) 0;
-    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: rem(20);
+    @include adaptiveValue("margin-top",50 , 30);
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: em(575)){
+        text-align: center;
+    }
   }
-
+  &__img{
+    
+  }
+  &__img img{
+    width: 100%;
+  }
   &__content {
+   
     
   }
 
   &__title {
     font-weight: 600;
-    font-size: 48px;
+    
+    @include adaptiveValue("font-size", 48, 30);
     line-height: 80px;
   }
 
   &__rext {
     font-weight: 400;
-    font-size: 20px;
+    @include adaptiveValue("font-size", 20, 17);
     line-height: 30px;
      color: #8F95A5;
   }
 
   &__numetric {
     display: flex;
-    align-items: center;
+    
     justify-content: space-between;
     text-align: center;
+    @media (max-width: em(350)){
+      flex-direction: column;
+        
+    }
   }
 
   &__numetric-item {
+    flex: 0 1 33.333%;
   }
 
   &__number {
-    font-size: 48px;
+    font-weight: 600;
+    @include adaptiveValue("font-size", 40, 25);
     line-height: 80px;
+    @media (max-width: em(350)){
+      flex-direction: column;
+      font-size: rem(48);
+    }
   }
 
   &__name {
-    font-size: 20px;
+    
+    @include adaptiveValue("font-size", 20, 15);
     line-height: 30px;
 
 

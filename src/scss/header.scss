@@ -6,11 +6,13 @@
 
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	
+	@media (max-width:em(770)) {
 		display: block;
+		
 		position: relative;
 		width: rem(30);
-		height: rem(18);
+		height: rem(20);
 		cursor: pointer;
 		z-index: 5;
 		span,
@@ -18,17 +20,19 @@
 		&::after {
 			content: "";
 			transition: all 0.3s ease 0s;
-			right: 0;
+			left: 0;
 			position: absolute;
 			width: 100%;
-			height: rem(2);
-			background-color: #000;
+			height: 3px;
+			background-color:#39515E;
+			border-radius: 1px;
 		}
 		&::before {
 			top: 0;
 		}
 		&::after {
 			bottom: 0;
+			width: 68%;
 		}
 		span {
 			top: calc(50% - rem(1));
@@ -41,10 +45,11 @@
 			&::after {
 			}
 			&::before {
-				top: calc(50% - rem(1));
+				top: calc(50% - rem(2));
 				transform: rotate(-45deg);
 			}
 			&::after {
+				width: 98.9%;
 				bottom: calc(50% - rem(1));
 				transform: rotate(45deg);
 			}
@@ -52,51 +57,8 @@
 	}
 }
 
-.header {
 
-	&__container {
-	}
 
-	&__logo {
-	}
-
-	&__menu {
-		display: flex;
-		gap: rem(30);
-		color:$mainColorBlue;
-	}
-
-	&__menu-item {
-		
-		
-		&:hover{
-			text-decoration: underline;
-		}
-	}
-
-	&__menu-link {
-	}
-
-	&__button {
-	}
-}
-.container__header {
-	// display: grid;
-	// grid-template-columns: 20% 60% 20%;
-	// justify-content: space-between;
-	display: flex;
-	justify-content:space-between;
-	align-items: center;
-	gap: rem(15);
-	padding: rem(30) 0;
-	
-	
-	}
-
-.icon-logo {
-	
-
-	}
 
 .btn {
 	transition: all 0.3s ease;
@@ -108,12 +70,158 @@
 .btn-white {
 	border: 2px solid #263238;
 	font-weight: 400;
-	font-size: 24px;
-	line-height: 36px;
+	font-size: rem(24);
+	line-height: rem(36);
 	padding: rem(17) rem(57);
+	
+	@media (min-width: em(770)){
+		
+		@include adaptiveValue("font-size", 24, 10);
+		@include adaptiveValue("padding-top", 17, 11);
+		@include adaptiveValue("padding-bottom", 17, 11);
+		@include adaptiveValue("padding-left", 57, 5 );
+		@include adaptiveValue("padding-right", 57, 5);
+		  
+	}
+	@media (max-width: em(770)){
+		margin: 0 auto;
+		@include adaptiveValue("font-size", 24, 30);
+		@include adaptiveValue("padding-top", 17, 20);
+		@include adaptiveValue("padding-bottom", 17, 20);
+		@include adaptiveValue("padding-left", 57, 75 );
+		@include adaptiveValue("padding-right", 57, 75);
+		  
+	}
+	 
 }
 .btn-dark {
   color: #FFFFFF;
   background: #263238;
  
+}
+
+
+.header {
+	padding: rem(30) rem(0) rem(30) rem(0);
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include adaptiveValue("gap",15 ,10 );
+
+	}
+
+	&__logo {
+		background: linear-gradient(to right, #000000 52%, #CFCFCF 50%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: 400;
+		font-size: 36px;
+		line-height: 54px;
+		z-index: 5;
+	}
+
+	&__list {
+		display: flex;
+		row-gap: rem(10);
+		column-gap: rem(30);
+		color: #263238;
+		@media (max-width: em(767)){
+			  flex-direction: column;
+				font-size: 22px;
+				line-height: 60px;
+				margin-bottom: rem(50);
+		}
+	}
+
+	&__item {
+		flex-wrap: wrap;
+		font-size: 20px;
+		line-height: 30px;
+		@media (max-width: em(767)){
+		
+			font-size: 30px;
+			line-height: 60px;
+	}
+	}
+
+	&__btn {
+	}
+}
+.header {
+
+	&__menu {
+		display: none;
+		@media (max-width:em(770)){
+			display: block;
+		}
+	}
+}
+.menu {
+	
+	&__icon {
+	}
+
+	&__body {
+	
+		z-index: 4;
+		position: fixed;
+		left: -100%;
+		top: 0;
+		width: 68%;
+		height: 100%;
+		background-color: #fff;
+		padding: rem(130) rem(15) rem(0) rem(15);
+		overflow: auto;
+		transition: all 0.3s ease;
+		@media (max-width: em(575)){
+			width: 100%;  
+		}
+	}
+	&__body::before {
+		content: "";
+		position: fixed;
+		width: 60%;
+		top: 0;
+		
+		height: 100px;
+		z-index: 5;
+		background-color: #fff;
+		border-bottom: 2px solid #C4C4C4;;
+		padding: rem(0) rem(20) rem(0) rem(20);
+		@media (max-width: em(575)){
+			width: 95%;  
+		}
+	
+	}
+
+	&__list {
+	}
+}
+.icon-menu {
+}
+
+.menu-open{
+	.wrapper{background: rgba(7, 34, 47, 0.1);}
+	.opacitys{
+		opacity: 0.02;
+	}
+	.header{
+		width: 65%;
+		@media (max-width: em(575)){
+			width: 100%;  
+		}
+	}
+	.menu {
+		
+		&__icon {
+		}
+	
+		&__body {
+		left: 0;
+		}
+}
+
+
+
 }

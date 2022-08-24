@@ -12,7 +12,12 @@
 	&:before {
 		@extend %ic;
 		display: block;
+    margin-right: rem(10);
 	}
+}
+._icon-stairs:before {
+  content: "\e912";
+  color: #e7e8e3;
 }
 ._icon-arrow:before {
   content: "\e900";

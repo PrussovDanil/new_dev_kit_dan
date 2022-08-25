@@ -144,31 +144,31 @@
 }
 
 
-.button {
-	padding: rem(15) rem(21) ;
-	color: $mainColor;
-	border-radius: 6px;
-	transition: box-shadow  0.3s;
-	@media (any-hover: hover){
-		&:hover{
-			box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-		}
-	}
-	&__white {
-		display: flex;
-		background: #FFFFFF;
-		border: 1px solid $grayColor;
-		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+// .button {
+// 	padding: rem(15) rem(21) ;
+// 	color: $mainColor;
+// 	border-radius: 6px;
+// 	transition: box-shadow  0.3s;
+// 	@media (any-hover: hover){
+// 		&:hover{
+// 			box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+// 		}
+// 	}
+// 	&__white {
+// 		display: flex;
+// 		background: #FFFFFF;
+// 		border: 1px solid $grayColor;
+// 		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 	
 		
-	}
+// 	}
 
-	&__orange {
-		color: #FFFFFF;
-		background: $bronzeColor;
-		border: 1px solid $bronzeColor;
-	}
-}
+// 	&__orange {
+// 		color: #FFFFFF;
+// 		background: $bronzeColor;
+// 		border: 1px solid $bronzeColor;
+// 	}
+// }
 
 
 

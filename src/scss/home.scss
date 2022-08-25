@@ -106,6 +106,9 @@
   padding: rem(4) rem(12);
 }
 
+.tag--bronze{
+  background: #FAE8E1;;
+}
 .main--title {
   font-style: normal;
   font-weight: 700;
@@ -275,10 +278,14 @@
 
 
 .benefits {
+  background: #fff;
+  
 
   &__container {}
 
-  &__body {}
+  &__body {
+    padding: rem(100) rem(0);
+  }
 
   &__content {
     display: grid;
@@ -361,31 +368,37 @@
 //=====================================<CART>==================================================================================================================
 .card {
 
-  &__container {}
-
-  &__body {position: relative;
+  &__container {
+    position: relative;
 
     &::before {
       content: "\e912";
       font-family: "icons";
       position: absolute;
-      top: 0%;
-      left: -10%;
+      transform: translate(8%,4%);
+      top: -8.5%;
+      right: -4%;
       font-size: 130px;
       color: #E7E8E3;
+      transform: scale(-1, 1);
     }
 
     &::after {
       content: "\e912";
       font-family: "icons";
       position: absolute;
-      bottom: 0%;
-      right:-10%;
+      bottom: -8.5%;
+      left:-4%;
       font-size: 130px;
+      transform: scale(1, -1);
       color: #E7E8E3;
-      transform: rotate(180deg);
+      
     }}
+  
 
+  &__body {
+    
+  }
   &__texts {
     text-align: center;
 
@@ -447,7 +460,9 @@
       gap: rem(3);
     }
   }
-
+  &--buttons{
+    margin: rem(80) rem(0) ;
+  }
 
 }
 
@@ -526,7 +541,8 @@
 
 //=====================================<priority>===================================================================================================================
 .priority {
-  
+  margin-bottom: rem(0);
+  background: linear-gradient(0deg, #fff 50%, #F5F5F2 50%);
   &__container {
   }
 
@@ -567,4 +583,167 @@
 
 }
 //=====================================<customers>===================================================================================================================
+.customers {
+  padding: rem(50) rem(0) rem(160) rem(0);
+  background:#fff;
+  &__container {
+  }
+
+  &__body {
+  }
+
+  &__text {
+    padding: rem(50) rem(0);
+    text-align: center;
+    &--title {
+    }
+  
+    &--subtitle {
+    }
+  }
+
+  
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:rem(20);
+  }
+
+  &__item {
+    gap: rem(20);
+    padding: rem(20) rem(20) ;
+    background: #FFFFFF;
+    border: 1px solid #E7E8E3;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+      }
+
+  &__rating {
+    margin-bottom: rem(20);
+  }
+
+  &__star {
+    color:$bronzeColor;
+  }
+
+  &__texts{
+    margin-bottom: rem(20);
+  }
+
+  &__avatar {
+    display: flex;
+    gap: rem(20);
+  }
+
+  &__avatar--img {
+  }
+
+  &__avatar--data {
+  }
+
+  &__data--name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__data--job {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $secondaryColor;
+  }
+}
+
 //=====================================<posts>===================================================================================================================
+.post {
+
+  &__container {
+  }
+
+  &__body {
+  }
+
+  &__text {
+    &--top {
+    }
+  
+    &--title {
+      margin-bottom: rem(20);
+    }
+    &--subtitle {
+      max-width: rem(710);
+      margin-bottom: rem(20);
+    }
+  
+    &--block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+ 
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    gap: rem(20);
+  }
+
+  &__item {
+    
+    background: #FFFFFF;
+    border: 1px solid #E7E8E3;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    &--text {
+      padding: rem(24);
+    }
+    &--img {
+      img{
+        width: 100%;
+      }
+    }
+  
+    &--info {
+      display: flex;
+      gap: rem(10);
+      margin-bottom: rem(20);
+    }
+  
+    &--tag {
+    }
+  
+    &--data {
+    }
+  
+    &--title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: rem(20);
+    }
+  
+    &--subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #65665C;
+      margin-bottom: rem(20);
+    }
+  }
+  &__buttons{
+    padding: 0;
+    position: relative;
+    &::before{
+      position: absolute;
+      bottom: 10%;
+      right: -27%;
+    }
+  }
+
+ 
+}
+

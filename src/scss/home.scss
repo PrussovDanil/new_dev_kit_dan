@@ -43,7 +43,8 @@
     text-align: left;
 
     @media (min-width:em(1020)) {
-      margin-left: rem(80);
+      
+      @include adaptiveValue("margin-left", 80,10 );
     }
 
     display: flex;
@@ -69,7 +70,7 @@
   &__search {
     display: flex;
     flex-shrink: 0;
-    gap: rem(20);
+    @include adaptiveValue("gap ", 20, 5,1090, 920);
     margin-right: rem(10);
     position: relative;
 

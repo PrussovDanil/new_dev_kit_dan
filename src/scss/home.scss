@@ -11,7 +11,7 @@
 
   &__content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
     background-color: #F5F5F2;
     position: relative;
 
@@ -21,7 +21,8 @@
       position: absolute;
       top: 0%;
       left: 0%;
-      font-size: 130px;
+      
+      @include adaptiveValue("font-size",130 ,60,2562,900 );
       color: #E7E8E3;
     }
 
@@ -31,21 +32,40 @@
       position: absolute;
       bottom: 0%;
       right: 50%;
-      font-size: 130px;
+      font-size: rem(130);
       color: #E7E8E3;
       transform: rotate(180deg);
+      @include adaptiveValue("font-size",130 ,60,2562,900 );
     }
-
+    @media (max-width:em(950)){
+      align-items: center;
+      text-align: center;
+      &::before {
+        font-size: 0;
+      }
+  
+      &::after {
+        font-size: 0;
+       
+      }
+    }
+    @media (max-width:em(490)){
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 
   }
 
   &__text {
     text-align: left;
-
-    @media (min-width:em(1020)) {
-      
-      @include adaptiveValue("margin-left", 80,10 );
+    padding: rem(0) rem(20) rem(0) rem(80);
+    @media (max-width:em(1221)){
+      padding: rem(20); 
     }
+    @media (max-width:em(950)){
+      text-align: center;
+      align-items: center;
+    }
+    
 
     display: flex;
     flex-direction: column;
@@ -54,12 +74,14 @@
 
     &--title {
       font-size: rem(56);
+      @include adaptiveValue("font-size",56 ,20 );
       line-height: rem(67);
     }
 
     &--subtitle {
       max-width: rem(503);
       font-size: rem(20);
+      @include adaptiveValue("font-size",20 ,5 );
       line-height: rem(30);
       color: $secondaryColor;
 
@@ -94,6 +116,12 @@
 
     &--button {}
   }
+  &__img{
+    img{
+
+      width: 100%;
+    }
+  }
 }
 
 //======================================<HELP__ATR>=========================================================
@@ -125,7 +153,11 @@
 }
 
 .button {
-  padding: rem(15) rem(21);
+  // padding: rem(15) rem(21);
+  @include adaptiveValue("padding-top ", 15,10 );
+  @include adaptiveValue("padding-bottom", 15,10 );
+  @include adaptiveValue("padding-left", 21,5 );
+  @include adaptiveValue("padding-right", 21,5 );
   color: $mainColor;
   border-radius: 6px;
   transition: all ease 0.3s;
@@ -186,6 +218,11 @@
     display: flex;
     justify-content: space-between;
     padding: rem(67) rem(0);
+    @media (max-width:em(992)){
+        flex-direction: column;
+        align-items: center;
+        gap: rem(30);
+    }
   }
 
   &__text {
@@ -198,6 +235,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: rem(32);
+    align-items: center;
+    justify-content: center;
 
     &--item {}
   }
@@ -286,15 +325,19 @@
 
   &__body {
     padding: rem(100) rem(0);
+    
   }
 
   &__content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     align-items: center;
     justify-content: space-between;
     margin-bottom: rem(20);
     @include adaptiveValue("gap", 112, 10, 1920, 998);
+    @media (max-width:em(490)){
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 
     &--img {
       img {
@@ -304,6 +347,10 @@
   }
 
   &__text {
+    padding: rem(10);
+    @media (max-width:$pc){
+        
+    }
     &--top {}
 
     &--title {
@@ -362,7 +409,9 @@
 
 .benefits--reverse {
   order: 1;
-
+  @media (max-width:em(1024)){
+      order: 0;
+  }
 }
 
 
@@ -371,7 +420,9 @@
 
   &__container {
     position: relative;
-
+    @media (max-width:em(1275)){
+        position: static;
+    }
     &::before {
       content: "\e912";
       font-family: "icons";
@@ -395,6 +446,7 @@
       color: #E7E8E3;
       
     }}
+   
   
 
   &__body {
@@ -419,6 +471,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: rem(20);
+    @media (max-width:em(490)){
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 
   }
 
@@ -505,6 +560,9 @@
     display: grid;
     gap: rem(20);
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    @media (max-width:em(490)){
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
   }
 
   &__item {
@@ -667,6 +725,10 @@
   }
 
   &__text {
+    margin-bottom: rem(50);
+    @media (max-width:$tablet){
+      text-align: center;    
+    }  
     &--top {
     }
   
@@ -682,6 +744,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media (max-width:$tablet){
+        flex-direction: column;
+          
+      } 
     }
   }
 
@@ -689,7 +755,7 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     gap: rem(20);
   }
 

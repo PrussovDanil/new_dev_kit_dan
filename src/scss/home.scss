@@ -50,7 +50,7 @@
       }
     }
     @media (max-width:em(490)){
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     }
 
   }
@@ -58,7 +58,7 @@
   &__text {
     text-align: left;
     padding: rem(0) rem(20) rem(0) rem(80);
-    @media (max-width:em(1221)){
+    @media (max-width:em(985)){
       padding: rem(20); 
     }
     @media (max-width:em(950)){
@@ -74,7 +74,7 @@
 
     &--title {
       font-size: rem(56);
-      @include adaptiveValue("font-size",56 ,20 );
+      @include adaptiveValue("font-size",56 ,10 );
       line-height: rem(67);
     }
 
@@ -90,6 +90,10 @@
   }
 
   &__search {
+    @media (max-width:$mobile){
+      flex-direction: column;
+      margin: 0px 10px; 
+    }
     display: flex;
     flex-shrink: 0;
     @include adaptiveValue("gap ", 20, 5,1090, 920);
@@ -104,6 +108,10 @@
       left: 3%;
       font-size: rem(20);
       color: $secondaryColor;
+      @media (max-width:$mobile){
+        top: 15%;
+        left: 9%;
+      }
     }
 
     &--input {
@@ -336,7 +344,7 @@
     margin-bottom: rem(20);
     @include adaptiveValue("gap", 112, 10, 1920, 998);
     @media (max-width:em(490)){
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     }
 
     &--img {
@@ -472,7 +480,7 @@
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: rem(20);
     @media (max-width:em(490)){
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     }
 
   }
@@ -561,7 +569,7 @@
     gap: rem(20);
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     @media (max-width:em(490)){
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     }
   }
 
@@ -755,7 +763,7 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(290px,1fr));
     gap: rem(20);
   }
 
